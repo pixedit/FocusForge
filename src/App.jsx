@@ -1,7 +1,15 @@
-import "./App.css";
+import AddTask from "./components/Header/AddTask";
+import TaskList from "./components/TaskList/TaskList";
 
 function App() {
-	return;
+	return (
+		<div className="container">
+			<div className="to-do-app">
+				<AddTask />
+				<TaskList />
+			</div>
+		</div>
+	);
 }
 
 export default App;
