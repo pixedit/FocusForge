@@ -43,9 +43,22 @@
     border-radius: 10px;
     margin-top: 8px;
     font-weight: bold;
+    transition: all 0.2s;
+
 }
 
 .inputs input:focus {
     background-color: rgba(203, 167, 135, 0.576);
-    /* color: aliceblue; */
+    transform: scale(1.05);
+}
+
+.header button {
+    border: none;
+    margin-top: 15px;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    background-color: rgba(0, 154, 0, 0.854);
+    color: aliceblue;
+    font-weight: 600;
+
 }

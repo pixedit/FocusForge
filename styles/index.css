@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Vazirmatn:wght@100..900&display=swap');
+
 
 * {
     padding: 0;
@@ -8,7 +10,7 @@
 
 body {
     background-color: rgb(232, 229, 205);
-    font-family: 'Outfit', sans-serif;
+    font-family: "Vasirmath", sans-serif;
 }
 
 ul,
@@ -27,26 +29,4 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-/* Customize the width of the scrollbar */
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-/* Background of the scrollbar */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-/* Handle (the draggable part of the scrollbar) */
-::-webkit-scrollbar-thumb {
-    background: #9e6c376f;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #8b3f128a;
 }

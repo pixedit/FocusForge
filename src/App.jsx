@@ -1,12 +1,15 @@
 import AddTask from "./components/Header/AddTask";
 import TaskList from "./components/TaskList/TaskList";
+import { TaskProvider } from "./context/TaskContext";
 
 function App() {
 	return (
 		<div className="container">
 			<div className="to-do-app">
-				<AddTask />
-				<TaskList />
+				<TaskProvider>
+					<AddTask />
+					<TaskList />
+				</TaskProvider>
 			</div>
 		</div>
 	);
