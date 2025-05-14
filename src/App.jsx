@@ -1,6 +1,6 @@
 import AddTask from "./components/Header/AddTask";
 import TaskList from "./components/TaskList/TaskList";
-import { TaskProvider } from "./context/TaskContext";
+import { TaskProvider } from "./context/TaskProvider";
 
 function App() {
 	return (

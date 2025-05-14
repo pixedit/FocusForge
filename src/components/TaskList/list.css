@@ -40,3 +40,7 @@
     color: rgb(82, 82, 82);
     text-align: center;
 }
+
+.task-control button {
+    border: none;
+}

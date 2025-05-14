@@ -16,6 +16,7 @@ const AddTask = () => {
 			setDescription("");
 		}
 	}
+
 	return (
 		<form className="header" onSubmit={handleSubmit}>
 			<h2>
