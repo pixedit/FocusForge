@@ -36,7 +36,8 @@
     margin-left: 5px;
 }
 
-.inputs input {
+.inputs input,
+.edit-mode input {
     border: none;
     outline: none;
     padding: 5px 8px;
@@ -47,12 +48,14 @@
 
 }
 
-.inputs input:focus {
+.inputs input:focus,
+.edit-mode input:focus {
     background-color: rgba(203, 167, 135, 0.576);
     transform: scale(1.05);
 }
 
-.header button {
+.header button,
+.edit-mode button {
     border: none;
     margin-top: 15px;
     padding: 0.5rem 1rem;
@@ -61,4 +64,8 @@
     color: aliceblue;
     font-weight: 600;
 
+}
+
+.edit-mode input {
+    margin: 0 8px;
 }

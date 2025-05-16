@@ -42,7 +42,9 @@ const AddTask = () => {
 					/>
 				</div>
 			</div>
-			<Button onClick={handleSubmit} label="Add Task" />
+			{title.length > 0 || description.length > 0 ? (
+				<Button onClick={handleSubmit} label="Add Task" />
+			) : null}
 		</form>
 	);
 };

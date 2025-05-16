@@ -15,10 +15,6 @@ export function TaskProvider({ children }) {
 		setTasks([...tasks, newTask]);
 	}
 
-	function editTask(id, updatedTask) {
-		setTasks(tasks.map((task) => (task.id === id ? updatedTask : task)));
-	}
-
 	const toggleComplete = (id) => {
 		setTasks(
 			tasks.map((task) =>
@@ -37,6 +33,21 @@ export function TaskProvider({ children }) {
 		if (confirmDelete) {
 			setTasks(tasks.filter((task) => task.id !== id));
 		}
+	}
+
+	function editTask(id, updatedTitle, updatedDescription) {
+		setTasks(
+			tasks.map((task) =>
+				task.id === id
+					? {
+							...task,
+							title: updatedTitle,
+							description: updatedDescription,
+							isEditing: false,
+					  }
+					: task
+			)
+		);
 	}
 	return (
 		<TaskContext.Provider
