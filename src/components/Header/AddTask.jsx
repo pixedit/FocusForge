@@ -11,7 +11,7 @@ const AddTask = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		if (title.trim() && description.trim()) {
-			addTask({ id: Date.now(), title, description });
+			addTask(title, description);
 			setTitle("");
 			setDescription("");
 		}

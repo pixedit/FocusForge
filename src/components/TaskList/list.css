@@ -43,4 +43,17 @@
 
 .task-control button {
     border: none;
+    background-color: unset;
+}
+
+.completed {
+    background-color: rgba(125, 4, 4, 0.405);
+    border: 1px solid rgba(255, 0, 0, 0.544);
+}
+
+.completed-message {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(148, 25, 25);
 }
