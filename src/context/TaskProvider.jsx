@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TaskContext } from "./TaskContext";
 
 export function TaskProvider({ children }) {
-	const [tasks, setTasks] = useState([]);
+	const [tasks, setTasks] = useState(() => {
+		const storedTasks = localStorage.getItem("tasks");
+		return storedTasks ? JSON.parse(storedTasks) : [];
+	});
+
+	useEffect(() => {
+		localStorage.setItem("tasks", JSON.stringify(tasks));
+	}, [tasks]);
 
 	function addTask(taskTitle, taskDescription) {
 		const newTask = {
