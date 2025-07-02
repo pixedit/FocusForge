@@ -38,11 +38,13 @@ export default function TaskList() {
 									type="text"
 									value={editTitle}
 									onChange={(e) => setEditTitle(e.target.value)}
+									placeholder="Edit Title"
 								/>
 								<input
 									type="text"
 									value={editDescription}
 									onChange={(e) => setEditDescription(e.target.value)}
+									placeholder="Edit Description"
 								/>
 								<button onClick={() => handleSaveClick(task.id)}>Save</button>
 							</div>

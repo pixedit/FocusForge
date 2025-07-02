@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 import { TaskContext } from "./TaskContext";
+import PropTypes from "prop-types";
+
+TaskProvider.propTypes = {
+	children: PropTypes.node, // Validating the 'children' prop
+};
 
 export function TaskProvider({ children }) {
 	const [tasks, setTasks] = useState(() => {
@@ -14,23 +19,12 @@ export function TaskProvider({ children }) {
 	function addTask(taskTitle, taskDescription) {
 		const newTask = {
 			id: Date.now(),
-			title: String(taskTitle),
-			description: String(taskDescription),
+			title: taskTitle,
+			description: taskDescription,
 			isCompleted: false,
-			isEditing: false,
 		};
 		setTasks([...tasks, newTask]);
 	}
-
-	const toggleComplete = (id) => {
-		setTasks(
-			tasks.map((task) =>
-				task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
-			)
-		);
-	};
-
-	// task.isCompleted = !task.isCompleted
 
 	function deleteTask(id) {
 		const confirmDelete = window.confirm(
@@ -42,6 +36,14 @@ export function TaskProvider({ children }) {
 		}
 	}
 
+	const toggleComplete = (id) => {
+		setTasks(
+			tasks.map((task) =>
+				task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+			)
+		);
+	};
+
 	function editTask(id, updatedTitle, updatedDescription) {
 		setTasks(
 			tasks.map((task) =>
@@ -50,7 +52,6 @@ export function TaskProvider({ children }) {
 							...task,
 							title: updatedTitle,
 							description: updatedDescription,
-							isEditing: false,
 					  }
 					: task
 			)
