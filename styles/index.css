@@ -29,3 +29,60 @@ a {
     align-items: center;
     flex-direction: column;
 }
+
+
+
+@media(max-width:500px) {
+    .container {
+        height: auto;
+    }
+
+    .to-do-app {
+        width: 95%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .header {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .header h2 {
+        font-size: 16px;
+    }
+
+    .inputs {
+        display: block;
+    }
+
+    .task {
+        margin-top: 1rem;
+    }
+
+    .inputs input {
+        width: 100%;
+    }
+
+    .task-title,
+    .task-control p {
+        font-size: 16px;
+    }
+
+    .task-control {
+        display: block;
+    }
+
+    .task-control p {
+        margin-bottom: 1rem;
+    }
+
+    .edit-mode input {
+        margin-bottom: 1rem;
+    }
+
+    .task-list {
+        padding: 0.5rem 1rem;
+    }
+
+}
