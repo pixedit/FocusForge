@@ -49,6 +49,7 @@
 .completed {
     background-color: rgba(125, 4, 4, 0.405);
     border: 1px solid rgba(255, 0, 0, 0.544);
+    transition: 0.6s all;
 }
 
 .completed-message {
@@ -56,4 +57,5 @@
     font-weight: 600;
     font-size: 20px;
     color: rgb(148, 25, 25);
+    transform: translateY(0);
 }
